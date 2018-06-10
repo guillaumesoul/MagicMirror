@@ -54,7 +54,7 @@ Module.register("newsfeed",{
 
 	// Define start sequence.
 	start: function() {
-		Log.info("Starting module: " + this.name);
+		//Log.info("Starting module: " + this.name);
 
 		// Set locale.
 		moment.locale(config.language);
@@ -328,7 +328,7 @@ Module.register("newsfeed",{
 	},
 
 	notificationReceived: function(notification, payload, sender) {
-		Log.info(this.name + " - received notification: " + notification);
+		//Log.info(this.name + " - received notification: " + notification);
 		if(notification == "ARTICLE_NEXT"){
 			var before = this.activeItem;
 			this.activeItem++;
@@ -336,7 +336,7 @@ Module.register("newsfeed",{
 				this.activeItem = 0;
 			}
 			this.resetDescrOrFullArticleAndTimer();
-			Log.info(this.name + " - going from article #" + before + " to #" + this.activeItem + " (of " + this.newsItems.length + ")");
+			//Log.info(this.name + " - going from article #" + before + " to #" + this.activeItem + " (of " + this.newsItems.length + ")");
 			this.updateDom(100);
 		} else if(notification == "ARTICLE_PREVIOUS"){
 			var before = this.activeItem;
@@ -345,7 +345,7 @@ Module.register("newsfeed",{
 				this.activeItem = this.newsItems.length - 1;
 			}
 			this.resetDescrOrFullArticleAndTimer();
-			Log.info(this.name + " - going from article #" + before + " to #" + this.activeItem + " (of " + this.newsItems.length + ")");
+			//Log.info(this.name + " - going from article #" + before + " to #" + this.activeItem + " (of " + this.newsItems.length + ")");
 			this.updateDom(100);
 		}
 		// if "more details" is received the first time: show article summary, on second time show full article
@@ -354,14 +354,14 @@ Module.register("newsfeed",{
 			this.config.showFullArticle = !this.config.showDescription;
 			clearInterval(timer);
 			timer = null;
-			Log.info(this.name + " - showing " + this.config.showDescription ? "article description" : "full article");
+			//Log.info(this.name + " - showing " + this.config.showDescription ? "article description" : "full article");
 			this.updateDom(100);
 		} else if(notification == "ARTICLE_LESS_DETAILS"){
 			this.resetDescrOrFullArticleAndTimer();
-			Log.info(this.name + " - showing only article titles again");
+			//Log.info(this.name + " - showing only article titles again");
 			this.updateDom(100);
 		} else {
-			Log.info(this.name + " - unknown notification, ignoring: " + notification);
+			//Log.info(this.name + " - unknown notification, ignoring: " + notification);
 		}
 	},
 

@@ -43,7 +43,7 @@ var Module = Class.extend({
 	 * Is called when the module is started.
 	 */
 	start: function () {
-		Log.info("Starting module: " + this.name);
+		//Log.info("Starting module: " + this.name);
 	},
 
 	/* getScripts()
@@ -151,9 +151,9 @@ var Module = Class.extend({
 	 */
 	notificationReceived: function (notification, payload, sender) {
 		if (sender) {
-			Log.log(this.name + " received a module notification: " + notification + " from sender: " + sender.name);
+			//Log.log(this.name + " received a module notification: " + notification + " from sender: " + sender.name);
 		} else {
-			Log.log(this.name + " received a system notification: " + notification);
+			//Log.log(this.name + " received a system notification: " + notification);
 		}
 	},
 
@@ -188,21 +188,21 @@ var Module = Class.extend({
 	 * argument payload mixed - The payload of the notification.
 	 */
 	socketNotificationReceived: function (notification, payload) {
-		Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
+		//Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
 	},
 
 	/* suspend()
 	 * This method is called when a module is hidden.
 	 */
 	suspend: function () {
-		Log.log(this.name + " is suspended.");
+		//Log.log(this.name + " is suspended.");
 	},
 
 	/* resume()
 	 * This method is called when a module is shown.
 	 */
 	resume: function () {
-		Log.log(this.name + " is resumed.");
+		//Log.log(this.name + " is resumed.");
 	},
 
 	/*********************************************
@@ -466,15 +466,15 @@ function cmpVersions(a, b) {
 Module.register = function (name, moduleDefinition) {
 
 	if (moduleDefinition.requiresVersion) {
-		Log.log("Check MagicMirror version for module '" + name + "' - Minimum version:  " + moduleDefinition.requiresVersion + " - Current version: " + version);
+		//Log.log("Check MagicMirror version for module '" + name + "' - Minimum version:  " + moduleDefinition.requiresVersion + " - Current version: " + version);
 		if (cmpVersions(version, moduleDefinition.requiresVersion) >= 0) {
-			Log.log("Version is ok!");
+			//Log.log("Version is ok!");
 		} else {
-			Log.log("Version is incorrect. Skip module: '" + name + "'");
+			//Log.log("Version is incorrect. Skip module: '" + name + "'");
 			return;
 		}
 	}
-	Log.log("Module registered: " + name);
+	//Log.log("Module registered: " + name);
 	Module.definitions[name] = moduleDefinition;
 };
 

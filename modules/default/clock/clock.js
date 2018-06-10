@@ -37,7 +37,7 @@ Module.register("clock",{
 	},
 	// Define start sequence.
 	start: function() {
-		Log.info("Starting module: " + this.name);
+		//Log.info("Starting module: " + this.name);
 
 		// Schedule update interval.
 		var self = this;

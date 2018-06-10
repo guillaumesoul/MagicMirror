@@ -149,16 +149,16 @@ var Loader = (function() {
 	 * argument callback function - Function called when done.
 	 */
 	var bootstrapModule = function(module, mObj, callback) {
-		Log.info("Bootstrapping module: " + module.name);
+		//Log.info("Bootstrapping module: " + module.name);
 
 		mObj.setData(module);
 
 		mObj.loadScripts(function() {
-			Log.log("Scripts loaded for: " + module.name);
+			//Log.log("Scripts loaded for: " + module.name);
 			mObj.loadStyles(function() {
-				Log.log("Styles loaded for: " + module.name);
+				//Log.log("Styles loaded for: " + module.name);
 				mObj.loadTranslations(function() {
-					Log.log("Translations loaded for: " + module.name);
+					//Log.log("Translations loaded for: " + module.name);
 					moduleObjects.push(mObj);
 					callback();
 				});
@@ -179,7 +179,7 @@ var Loader = (function() {
 
 		switch (extension.toLowerCase()) {
 		case "js":
-			Log.log("Load script: " + fileName);
+			//Log.log("Load script: " + fileName);
 			var script = document.createElement("script");
 			script.type = "text/javascript";
 			script.src = fileName;
@@ -194,7 +194,7 @@ var Loader = (function() {
 			document.getElementsByTagName("body")[0].appendChild(script);
 			break;
 		case "css":
-			Log.log("Load stylesheet: " + fileName);
+			//Log.log("Load stylesheet: " + fileName);
 			var stylesheet = document.createElement("link");
 			stylesheet.rel = "stylesheet";
 			stylesheet.type = "text/css";
@@ -234,7 +234,7 @@ var Loader = (function() {
 		loadFile: function(fileName, module, callback) {
 
 			if (loadedFiles.indexOf(fileName.toLowerCase()) !== -1) {
-				Log.log("File already loaded: " + fileName);
+				//Log.log("File already loaded: " + fileName);
 				callback();
 				return;
 			}

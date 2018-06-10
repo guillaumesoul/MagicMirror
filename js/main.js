@@ -226,7 +226,7 @@ var MM = (function() {
 		// Check if there are no more lockstrings set, or the force option is set.
 		// Otherwise cancel show action.
 		if (module.lockStrings.length !== 0 && options.force !== true) {
-			Log.log("Will not show " + module.name + ". LockStrings active: " + module.lockStrings.join(","));
+			//Log.log("Will not show " + module.name + ". LockStrings active: " + module.lockStrings.join(","));
 			return;
 		}
 
@@ -234,7 +234,7 @@ var MM = (function() {
 
 		// If forced show, clean current lockstrings.
 		if (module.lockStrings.length !== 0 && options.force === true) {
-			Log.log("Force show of module: " + module.name);
+			//Log.log("Force show of module: " + module.name);
 			module.lockStrings = [];
 		}
 
@@ -294,7 +294,7 @@ var MM = (function() {
 	var loadConfig = function() {
 		if (typeof config === "undefined") {
 			config = defaults;
-			Log.error("Config file is missing! Please create a config file.");
+			//Log.error("Config file is missing! Please create a config file.");
 			return;
 		}
 
@@ -401,7 +401,7 @@ var MM = (function() {
 		 * Main init method.
 		 */
 		init: function() {
-			Log.info("Initializing MagicMirror.");
+			//Log.info("Initializing MagicMirror.");
 			loadConfig();
 			Translator.loadCoreTranslations(config.language);
 			Loader.loadModules();
@@ -419,7 +419,7 @@ var MM = (function() {
 				modules[module.data.index] = module;
 			}
 
-			Log.info("All modules started!");
+			//Log.info("All modules started!");
 			sendNotification("ALL_MODULES_STARTED");
 
 			createDomObjects();
@@ -434,17 +434,17 @@ var MM = (function() {
 		 */
 		sendNotification: function(notification, payload, sender) {
 			if (arguments.length < 3) {
-				Log.error("sendNotification: Missing arguments.");
+				//Log.error("sendNotification: Missing arguments.");
 				return;
 			}
 
 			if (typeof notification !== "string") {
-				Log.error("sendNotification: Notification should be a string.");
+				//Log.error("sendNotification: Notification should be a string.");
 				return;
 			}
 
 			if (!(sender instanceof Module)) {
-				Log.error("sendNotification: Sender should be a module.");
+				//Log.error("sendNotification: Sender should be a module.");
 				return;
 			}
 
@@ -460,7 +460,7 @@ var MM = (function() {
 		 */
 		updateDom: function(module, speed) {
 			if (!(module instanceof Module)) {
-				Log.error("updateDom: Sender should be a module.");
+				//Log.error("updateDom: Sender should be a module.");
 				return;
 			}
 

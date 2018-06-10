@@ -87,7 +87,7 @@ Module.register("weatherforecast",{
 
 	// Define start sequence.
 	start: function() {
-		Log.info("Starting module: " + this.name);
+		//Log.info("Starting module: " + this.name);
 
 		// Set locale.
 		moment.locale(config.language);

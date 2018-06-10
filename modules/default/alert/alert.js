@@ -148,7 +148,7 @@ Module.register("alert",{
 				this.show_notification({title: this.translate("sysTitle"), message: this.config.welcome_message});
 			}
 		}
-		Log.info("Starting module: " + this.name);
+		//Log.info("Starting module: " + this.name);
 	}
 
 });

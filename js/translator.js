@@ -165,9 +165,9 @@ var Translator = (function() {
 		 */
 		load: function(module, file, isFallback, callback) {
 			if (!isFallback) {
-				Log.log(module.name + " - Load translation: " + file);
+				//Log.log(module.name + " - Load translation: " + file);
 			} else {
-				Log.log(module.name + " - Load translation fallback: " + file);
+				//Log.log(module.name + " - Load translation fallback: " + file);
 			}
 
 			var self = this;
@@ -194,12 +194,12 @@ var Translator = (function() {
 			var self = this;
 
 			if (lang in translations) {
-				Log.log("Loading core translation file: " + translations[lang]);
+				//Log.log("Loading core translation file: " + translations[lang]);
 				loadJSON(translations[lang], function(translations) {
 					self.coreTranslations = translations;
 				});
 			} else {
-				Log.log("Configured language not found in core translations.");
+				//Log.log("Configured language not found in core translations.");
 			}
 
 			self.loadCoreTranslationsFallback();
@@ -216,7 +216,7 @@ var Translator = (function() {
 			// defined translation after the following line.
 			for (var first in translations) {break;}
 
-			Log.log("Loading core translation fallback file: " + translations[first]);
+			//Log.log("Loading core translation fallback file: " + translations[first]);
 			loadJSON(translations[first], function(translations) {
 				self.coreTranslationsFallback = translations;
 			});

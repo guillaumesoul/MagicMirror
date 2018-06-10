@@ -1,6 +1,6 @@
 html {
   cursor: none;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: #000;
 }
 
@@ -11,8 +11,9 @@ html {
 body {
   margin: 60px;
   position: absolute;
-  height: calc(100% - 120px);
+  /*height: calc(100% - 120px);*/
   width: calc(100% - 120px);
+  /*height: 2000px;*/
   background: #000;
   color: #aaa;
   font-family: "Roboto Condensed", sans-serif;

@@ -82,7 +82,7 @@ function cloneObject(obj) {
 		temp[key] = cloneObject(obj[key]);
 
 		if (key === "lockStrings") {
-			Log.log(key);
+			//Log.log(key);
 		}
 	}
 
