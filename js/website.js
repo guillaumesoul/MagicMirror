@@ -13,8 +13,6 @@ $(document).ready(function () {
 
 	let stepScroll = 0
 
-	//
-
 	$(window).on("click", function () {
 		(stepScroll >= nbScrollPage) ? stepScroll = 0 : stepScroll++
 		displayNextStep(stepScroll)
