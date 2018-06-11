@@ -9,6 +9,33 @@
  * Changes to this files will be ignored by GIT. *
  *****************************************************/
 
- body {
- 	
- }
+body {
+  position: absolute;
+  margin: 0;
+  height: 300vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.css_window_step {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  height: 100%;
+}
+
+#css_step1 {
+  top: 0vh;
+}
+
+#css_step2 {
+  top: 100vh;
+  background-color: white;
+}
+
+#css_step3 {
+  top: 200vh;
+}
+
+
+

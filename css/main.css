@@ -1,6 +1,6 @@
 html {
-  cursor: none;
-  /*overflow: hidden;*/
+  /*cursor: none;
+  overflow: hidden;*/
   background: #000;
 }
 
@@ -125,7 +125,7 @@ sup {
 
 .no-wrap {
   white-space: nowrap;
-  overflow: hidden;
+  /*overflow: hidden;*/
   text-overflow: ellipsis;
 }
 
