@@ -1,6 +1,8 @@
 const demoStepLength = 5
 const stepScrollLength = 3
 
+const demoStepIndexTriggeringScroll = [2,4]
+
 $(document).ready(function () {
 
 	let demoStep = 0
@@ -9,7 +11,7 @@ $(document).ready(function () {
 	initPresentation()
 
 	$(window).on("click", function () {
-		displayNextStepDemo(demoStep)
+        demoStep = displayNextStepDemo(demoStep)
 	});
 });
 
@@ -21,8 +23,11 @@ function initPresentation() {
 function displayNextStepDemo(demoStep) {
 	(demoStep >= demoStepLength) ? demoStep = 0 : demoStep++
 	displayElementDemoStep(demoStep)
-	/*(stepScroll >= stepScrollLength) ? stepScroll = 0 : stepScroll++
-	scrollNextSection(stepScroll)*/
+    if(demoStepIndexTriggeringScroll.includes(demoStep)) {
+        var scrollStep = demoStepIndexTriggeringScroll.indexOf(demoStep)+1
+        scrollNextSection(scrollStep)
+	}
+    return demoStep
 }
 
 function displayElementDemoStep(demoStep) {
@@ -37,6 +42,6 @@ function displayElementDemoStep(demoStep) {
 
 // single page scroll manager
 // scroll height page
-function scrollNextSection(stepScroll) {
-	$("html, body").animate( { scrollTop: $(window).height()*stepScroll }, 1000 )
+function scrollNextSection(scrollStep) {
+    $("html, body").animate( { scrollTop: $(window).height()*scrollStep }, 1000 )
 };
