@@ -12,25 +12,14 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			anytime: [
-				"Hey there sexy!"
+				" ",
+				//"Votre miroir connecté",
 			],
-			morning: [
-				"Good morning, handsome!",
-				"Enjoy your day!",
-				"How was your sleep?"
-			],
-			afternoon: [
-				"Hello, beauty!",
-				"You look sexy!",
-				"Looking good today!"
-			],
-			evening: [
-				"Wow, you look hot!",
-				"You look nice!",
-				"Hi, sexy!"
-			]
+			/*morning: ["Que puis je faire pour vous ce matin?"],
+			afternoon: ["Que puis je faire pour vous cet après midi?"],
+			evening: ["Que puis je faire pour vous ce soir?"]*/
 		},
-		updateInterval: 30000,
+		updateInterval: 10000,
 		remoteFile: null,
 		fadeSpeed: 4000
 	},
@@ -154,6 +143,7 @@ Module.register("compliments", {
 		var wrapper = document.createElement("div");
 		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright";
 		wrapper.appendChild(compliment);
+		//wrapper.innerHTML(compliment);
 
 		return wrapper;
 	},

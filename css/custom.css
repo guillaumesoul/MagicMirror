@@ -24,18 +24,29 @@ body {
   height: 100%;
 }
 
-#css_step1 {
+#step1_container {
   top: 0vh;
 }
 
-#css_step2 {
+#step2_container {
   top: 100vh;
-  background-color: white;
 }
 
-#css_step3 {
+#step3_container {
   top: 200vh;
 }
 
+.region.third,
+.region.middle.center {
+  width: 100%;
+  text-align: center;
+  -moz-transform: translateY(-16%);
+  -o-transform: translateY(-16%);
+  -webkit-transform: translateY(-16%);
+  -ms-transform: translateY(-16%);
+  transform: translateY(-16%);
+}
 
-
+.region.middle.center {
+  top: 16%;
+}

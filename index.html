@@ -22,33 +22,45 @@
 <body>
 
 	<div id="css_Page_container">
-		<div class="region fullscreen below"><div class="container"></div></div>
-		<div class="region top bar">
-			<div class="container"></div>
-			<div class="region top left"><div class="container"></div></div>
-			<div class="region top center"><div class="container"></div></div>
-			<div class="region top right"><div class="container"></div></div>
-		</div>
-		<div class="region upper third"><div class="container"></div></div>
-		<div class="region middle center"><div class="container"></div></div>
-		<div class="region lower third"><div class="container"><br/></div></div>
-		<div class="region bottom bar">
-			<div class="container"></div>
-			<div class="region bottom left"><div class="container"></div></div>
-			<div class="region bottom center"><div class="container"></div></div>
-			<div class="region bottom right"><div class="container"></div></div>
-		</div>
-		<div class="region fullscreen above"><div class="container"></div></div>
 
 
 
-		<div id="css_step1" class="css_window_step">
-			STEP 1
+
+		<div id="step1_container" class="css_window_step">
+			<div class="region fullscreen below"><div class="container"></div></div>
+			<div class="region top bar">
+				<div class="container"></div>
+				<div class="region top left"><div class="container"></div></div>
+				<div class="region top center"><div class="container"></div></div>
+				<div class="region top right"><div class="container"></div></div>
+			</div>
+			<div class="region upper third"><div class="container"></div></div>
+			<div class="region middle center">
+				<div class="container">
+					<div id="greeting_title" class="thin xlarge bright">Votre miroir</div>
+					<div id="greeting_complement" class="thin xlarge bright" style="display: none;">connecté</div>
+				</div>
+			</div>
+			<div class="region lower third">
+				<div class="container">
+				</div>
+			</div>
+			<div class="region bottom bar">
+				<div class="container"></div>
+				<div class="region bottom left"><div class="container"></div></div>
+				<div class="region bottom center"><div class="container"></div></div>
+				<div class="region bottom right"><div class="container"></div></div>
+			</div>
+			<div class="region fullscreen above"><div class="container"></div></div>
 		</div>
-		<div id="css_step2" class="css_window_step">
+
+		<!-- STEP 2 -->
+		<div id="step2_container" class="css_window_step">
 			STEP2
 		</div>
-		<div id="css_step3" class="css_window_step">
+
+		<!-- STEP 3 -->
+		<div id="step3_container" class="css_window_step">
 			STEP3
 		</div>
 
@@ -74,7 +86,7 @@
 	<script type="text/javascript" src="js/loader.js"></script>
 	<script type="text/javascript" src="js/socketclient.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/website.js"></script>
+	<!--<script type="text/javascript" src="js/website.js"></script>-->
 
 </body>
 </html>
