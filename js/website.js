@@ -1,31 +1,44 @@
 const demoStepLength = 5
 const stepScrollLength = 3
 
-const demoStepIndexTriggeringScroll = [2,4]
+const demoStepIndexTriggeringScroll = [1,4]
 
 $(document).ready(function () {
 
-	$("#module_2_clock").fadeOut(100 )
 
 	let demoStep = 0
 	let stepScroll = 0
 
-	initPresentation()
+	//initPresentation()
+	setTimeout(initPresentation,5000)
 
 	$(window).on("click", function () {
 		demoStep = displayNextStepDemo(demoStep)
 	});
+
+	/*$(window).on("scroll", function () {
+		console.log("scroll");
+		var actualPosition = $(window).css()
+	});*/
+
+
+	var waypoint = new Waypoint({
+		element: document.getElementById('step2_container'),
+		handler: function(direction) {
+			//alert(' hit')
+			console.log(direction);
+		}
+	})
+
+
 });
 
 function initPresentation() {
-	//$(".region.top.left").hide()
-	//$(".region.top.right").hide()
-	//$(".region.middle.center").show()
-	//$("#greeting_complement").hide()
-	//$("#greeting_title").show()
 
 	$("#greeting_complement").fadeIn(5000 )
 	$("#module_2_clock").fadeIn(5000 )
+	$("#module_4_currentweather").fadeIn(5000 )
+	$("#module_5_weatherforecast").fadeIn(5000 )
 }
 
 function displayNextStepDemo(demoStep) {
