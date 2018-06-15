@@ -10,10 +10,10 @@ $(document).ready(function () {
 	let stepScroll = 0
 
 	//initPresentation()
-	setTimeout(initPresentation,5000)
+	setTimeout(initPresentation,2000)
 
 	$(window).on("click", function () {
-		demoStep = displayNextStepDemo(demoStep)
+		//demoStep = displayNextStepDemo(demoStep)
 	});
 
 	/*$(window).on("scroll", function () {
@@ -22,13 +22,13 @@ $(document).ready(function () {
 	});*/
 
 
-	var waypoint = new Waypoint({
+	/*var waypoint = new Waypoint({
 		element: document.getElementById('step2_container'),
 		handler: function(direction) {
 			//alert(' hit')
 			console.log(direction);
 		}
-	})
+	})*/
 
 
 });
@@ -36,9 +36,10 @@ $(document).ready(function () {
 function initPresentation() {
 
 	$("#greeting_complement").fadeIn(5000 )
-	$("#module_2_clock").fadeIn(5000 )
-	$("#module_4_currentweather").fadeIn(5000 )
-	$("#module_5_weatherforecast").fadeIn(5000 )
+	$(".module.clock").fadeIn(5000 )
+	//$(".module.currentweather").css('opacity',0);
+	$(".module.currentweather").fadeIn(5000 )
+	$(".module.weatherforecast").fadeIn(5000 )
 }
 
 function displayNextStepDemo(demoStep) {
