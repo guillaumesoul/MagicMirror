@@ -52,9 +52,9 @@ body {
 }
 
 #greeting_complement,
-#module_2_clock,
-#module_4_currentweather,
-#module_5_weatherforecast {
+.module.clock,
+.module.currentweather,
+.module.weatherforecast {
   display: none;
 }
 

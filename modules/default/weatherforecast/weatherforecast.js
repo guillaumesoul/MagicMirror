@@ -22,7 +22,7 @@ Module.register("weatherforecast",{
 		timeFormat: config.timeFormat,
 		lang: config.language,
 		decimalSymbol: ".",
-		fade: true,
+		fade: false,
 		fadePoint: 0.25, // Start on 1/4th of the list.
 		colored: false,
 		scale: false,

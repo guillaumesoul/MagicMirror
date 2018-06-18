@@ -32,9 +32,10 @@ $(document).ready(function () {
 function initPresentation() {
 
 	$("#greeting_complement").fadeIn(5000 )
-	$("#module_2_clock").fadeIn(5000 )
-	$("#module_4_currentweather").fadeIn(5000 )
-	$("#module_5_weatherforecast").fadeIn(5000 )
+	$(".module.clock").fadeIn(5000 )
+	//$(".module.currentweather").css('opacity',0);
+	$(".module.currentweather").fadeIn(5000 )
+	$(".module.weatherforecast").fadeIn(5000 )
 }
 
 function displayNextStepDemo(demoStep) {
