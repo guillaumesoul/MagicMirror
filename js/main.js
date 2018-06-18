@@ -34,7 +34,7 @@ var MM = (function() {
 					dom.className = "module " + dom.className + " " + module.data.classes;
 				}
 
-				dom.opacity = 0;
+				//dom.opacity = 0;
 				wrapper.appendChild(dom);
 
 				if (typeof module.data.header !== "undefined" && module.data.header !== "") {
@@ -187,8 +187,8 @@ var MM = (function() {
 
 		var moduleWrapper = document.getElementById(module.identifier);
 		if (moduleWrapper !== null) {
-			moduleWrapper.style.transition = "opacity " + speed / 1000 + "s";
-			moduleWrapper.style.opacity = 0;
+			//moduleWrapper.style.transition = "opacity " + speed / 1000 + "s";
+			//moduleWrapper.style.opacity = 0;
 
 			clearTimeout(module.showHideTimer);
 			module.showHideTimer = setTimeout(function() {
@@ -240,7 +240,7 @@ var MM = (function() {
 
 		var moduleWrapper = document.getElementById(module.identifier);
 		if (moduleWrapper !== null) {
-			moduleWrapper.style.transition = "opacity " + speed / 1000 + "s";
+			//moduleWrapper.style.transition = "opacity " + speed / 1000 + "s";
 			// Restore the postition. See hideModule() for more info.
 			moduleWrapper.style.position = "static";
 

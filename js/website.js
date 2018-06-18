@@ -5,12 +5,13 @@ const demoStepIndexTriggeringScroll = [1,4]
 
 $(document).ready(function () {
 
+	$("html, body").animate({ scrollTop: 0 }, "slow");
 
 	let demoStep = 0
 	let stepScroll = 0
 
 	//initPresentation()
-	setTimeout(initPresentation,5000)
+	setTimeout(initPresentation,4000)
 
 	$(window).on("click", function () {
 		demoStep = displayNextStepDemo(demoStep)
@@ -31,11 +32,12 @@ $(document).ready(function () {
 
 function initPresentation() {
 
+	$('.region.lower.third .container').css('display','block')
 	$("#greeting_complement").fadeIn(5000 )
 	$(".module.clock").fadeIn(5000 )
-	//$(".module.currentweather").css('opacity',0);
 	$(".module.currentweather").fadeIn(5000 )
 	$(".module.weatherforecast").fadeIn(5000 )
+	//$(".module.newsfeed").fadeIn(5000 )
 }
 
 function displayNextStepDemo(demoStep) {
