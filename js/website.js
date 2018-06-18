@@ -16,14 +16,10 @@ $(document).ready(function () {
 		demoStep = displayNextStepDemo(demoStep)
 	});
 
-	/*$(window).on("scroll", function () {
-		console.log("scroll");
-		var actualPosition = $(window).css()
-	});*/
-
 
 	var waypoint = new Waypoint({
-		element: document.getElementById('step2_container'),
+		//element: $('#step2_container'),
+		element: $('body'),
 		handler: function(direction) {
 			//alert(' hit')
 			console.log(direction);

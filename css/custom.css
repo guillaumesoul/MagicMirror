@@ -57,3 +57,25 @@ body {
 #module_5_weatherforecast {
   display: none;
 }
+
+.hall_width {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+}
+
+#step2_container .left_side {
+    background-color: white;
+}
+#step2_container .right_side {
+    background-color: black;
+    left: 50vw;
+}
+#step3_container .left_side {
+    background-color: black;
+}
+#step3_container .right_side {
+    background-color: white;
+    left: 50vw;
+}
+
