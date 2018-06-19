@@ -57,6 +57,7 @@ body {
 #greeting_complement,
 .module.clock,
 .module.currentweather,
+.module.newsfeed,
 .module.weatherforecast {
   display: none;
 }

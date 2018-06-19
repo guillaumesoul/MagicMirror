@@ -18,14 +18,11 @@ $(document).ready(function () {
 	});
 
 
-	var waypoint = new Waypoint({
-		//element: $('#step2_container'),
+	/*var waypoint = new Waypoint({
 		element: $('body'),
 		handler: function(direction) {
-			//alert(' hit')
-			console.log(direction);
 		}
-	})
+	})*/
 
 
 });
@@ -37,7 +34,7 @@ function initPresentation() {
 	$(".module.clock").fadeIn(5000 )
 	$(".module.currentweather").fadeIn(5000 )
 	$(".module.weatherforecast").fadeIn(5000 )
-	//$(".module.newsfeed").fadeIn(5000 )
+	$(".module.newsfeed").fadeIn(5000 )
 }
 
 function displayNextStepDemo(demoStep) {
