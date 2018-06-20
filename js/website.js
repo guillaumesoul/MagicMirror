@@ -11,11 +11,34 @@ $(document).ready(function () {
 	let stepScroll = 0
 
 	//initPresentation()
-	setTimeout(initPresentation,4000)
+	setTimeout(initPresentation,3000)
 
-	$(window).on("click", function () {
+	/*$(window).on("click", function () {
 		demoStep = displayNextStepDemo(demoStep)
-	});
+	});*/
+
+	/*$(window).on('scroll', function() {
+		console.log('scroll');
+	});*/
+
+	var lastScrollPosition = 0;
+	window.onscroll = function() {
+
+		var newScrollPosition = window.scrollY;
+		var windowHeight = $(window).height();
+		//console.log($(window).height());
+
+		var currentSection =  Math.floor(newScrollPosition / windowHeight);
+
+		if (newScrollPosition < lastScrollPosition){
+			//console.log("upward");
+			scrollNextSection('upward',currentSection);
+		}else{
+			//console.log("downward");
+			scrollNextSection('downward',currentSection);
+		}
+		lastScrollPosition = newScrollPosition;
+	}
 
 
 	/*var waypoint = new Waypoint({
@@ -58,8 +81,40 @@ function displayElementDemoStep(demoStep) {
 	}
 }
 
+var scrollComplete = true;
+
 // single page scroll manager
 // scroll height page
-function scrollNextSection(scrollStep) {
-	$("html, body").animate( { scrollTop: $(window).height()*scrollStep }, 1000 )
+//function scrollNextSection(scrollStep) {
+function scrollNextSection(direction, currentSection) {
+	//console.log(($(window).height())*(currentSection+1));
+	var coef = (direction == "upward") ? -1 : 1
+	var scrollTopValue = ($(window).height())*(currentSection+1)
+
+	console.log(scrollTopValue*coef);
+
+	/*if(scrollComplete) {
+		$("html, body").animate({
+			scrollTop: scrollTopValue*coef
+		},
+		{
+			easing: "swing",
+			duration: 5000,
+			progress: function() {
+				scrollComplete = false;
+			},
+			complete: function () {
+				scrollComplete = false;
+			}
+		});
+	}*/
+
+	/*if(direction == 'downward') {
+		$("html, body").animate( { scrollTop: $(window).height() }, 1000 )
+	}
+	if(direction == 'upward') {
+		$("html, body").animate( { scrollTop: -($(window).height()) }, 1000 )
+	}*/
+
+
 };

@@ -18,14 +18,16 @@ body {
 }
 
 .css_window_step {
-  position: absolute;
-  width: 100vw;
-  text-align: center;
-  height: 100vh;
+    position: absolute;
+    width: 90vw;
+    text-align: center;
+    height: 100vh;
+    padding-right: 5vh;
+    padding-left: 5vh;
 }
 
 #step1_container {
-  top: 0vh;
+  top: 5vh;
 }
 
 #step2_container {
@@ -34,6 +36,14 @@ body {
 
 #step3_container {
   top: 200vh;
+}
+
+#step4_container {
+  top: 300vh;
+}
+
+#step5_container {
+  top: 400vh;
 }
 
 .region.third,
@@ -53,6 +63,10 @@ body {
 .region.lower.third {
     top: 50%;
 }
+.region.bottom {
+    bottom: 10%;
+}
+
 
 #greeting_complement,
 .module.clock,
@@ -68,17 +82,17 @@ body {
     height: 100vh;
 }
 
-#step2_container .left_side {
+#step2_container .left_side, #step4_container .left_side {
     background-color: white;
 }
-#step2_container .right_side {
+#step2_container .right_side, #step4_container .right_side {
     background-color: black;
     left: 50vw;
 }
-#step3_container .left_side {
+#step3_container .left_side, #step5_container .left_side {
     background-color: black;
 }
-#step3_container .right_side {
+#step3_container .right_side, #step5_container .right_side {
     background-color: white;
     left: 50vw;
 }
