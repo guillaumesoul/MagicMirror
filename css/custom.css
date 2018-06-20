@@ -80,6 +80,7 @@ body {
     position: absolute;
     width: 50vw;
     height: 100vh;
+    text-align: center;
 }
 
 #step2_container .left_side, #step4_container .left_side {
@@ -97,3 +98,14 @@ body {
     left: 50vw;
 }
 
+.helper {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%
+}
+.hall_width .photo_hall{
+    /*position: relative;
+    top: 12vh;*/
+    width: 25vw;
+    vertical-align: middle;
+}
