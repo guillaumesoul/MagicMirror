@@ -17,7 +17,6 @@ body {
   overflow-y: scroll;
 }
 
-
 .css_window_step {
     position: absolute;
     text-align: center;
@@ -71,6 +70,10 @@ body {
     bottom: 10%;
 }
 
+.text_container_title {
+    font-size: 45px;
+    line-height: 45px;
+}
 
 #greeting_complement,
 .module.clock,
@@ -125,9 +128,12 @@ body {
     list-style-type: none;
 }
 
-table {
-    border-collapse: collapse;
+table.module_table {
     width: 100%;
+}
+
+table.module_table tr:nth-child(odd) td{
+    padding-top: 25px;
 }
 
 .module_icon {
@@ -135,7 +141,7 @@ table {
 }
 
 .size_2x {
-    /*width: 100px;*/
+    width: 100px;
 }
 
 
