@@ -97,7 +97,7 @@ body {
 
 .background_white {
     background-color: white;
-    color: black;
+    /*color: black;*/
 }
 
 .vertical_align_helper {
@@ -106,7 +106,7 @@ body {
 }
 
 .hall_width .photo_hall{
-    width: 25vw;
+    width: 35vw;
 }
 
 .hall_width .half_width_container{
