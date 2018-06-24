@@ -75,6 +75,23 @@ body {
     line-height: 45px;
 }
 
+table.table_accroches tr:nth-child(odd) td{
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+table.table_accroches tr:nth-child(even) td{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.table_accroches td {
+    font-size: 25px;
+    line-height: 30px;
+    vertical-align: top;
+}
+
 #greeting_complement,
 .module.clock,
 .module.currentweather,
@@ -95,11 +112,6 @@ body {
     left: 50vw;
 }
 
-.background_white {
-    background-color: white;
-    /*color: black;*/
-}
-
 .vertical_align_helper {
     display: inline-block;
     vertical-align: middle;
@@ -116,7 +128,6 @@ body {
 
 .text_container {
     font-weight: 250;
-    /*margin-left: 2vw;*/
 }
 
 .text_container ul {
