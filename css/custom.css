@@ -127,3 +127,12 @@ body {
     margin-left: 2 vw;
 }
 
+.text_container li {
+    list-style-type: none;
+}
+
+.module_icon {
+    width: 50px;
+}
+
+
