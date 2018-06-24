@@ -88,19 +88,13 @@ body {
     text-align: center;
 }
 
-#step2_container .left_side, #step4_container .left_side {
-    background-color: white;
-}
-#step2_container .right_side, #step4_container .right_side {
-    background-color: black;
+.right_side {
     left: 50vw;
 }
-#step3_container .left_side, #step5_container .left_side {
-    background-color: black;
-}
-#step3_container .right_side, #step5_container .right_side {
+
+.background_white {
     background-color: white;
-    left: 50vw;
+    color: black;
 }
 
 .vertical_align_helper {
@@ -119,7 +113,7 @@ body {
 
 .text_container {
     font-weight: 250;
-    margin-left: 2vw;
+    /*margin-left: 2vw;*/
 }
 
 .text_container ul {
@@ -131,8 +125,17 @@ body {
     list-style-type: none;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
 .module_icon {
     width: 50px;
+}
+
+.size_2x {
+    /*width: 100px;*/
 }
 
 
