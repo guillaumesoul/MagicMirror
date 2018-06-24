@@ -13,6 +13,7 @@
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="fonts/roboto.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<!-- custom.css is loaded by the loader.js to make sure it's loaded after the module css files. -->
 
 	<script type="text/javascript">
@@ -23,7 +24,7 @@
 
 	<div id="css_Page_container">
 
-		<div id="step1_container" class="css_window_step">
+		<div id="step1_container" class="css_window_step width_90">
 			<div class="region fullscreen below"><div class="container"></div></div>
 			<div class="region top bar">
 				<div class="container"></div>
@@ -52,7 +53,7 @@
 		</div>
 
 		<!-- STEP 2 -->
-		<div id="step2_container" class="css_window_step">
+		<div id="step2_container" class="css_window_step width_100">
 			<div class="hall_width left_side">
 				<div class="half_width_container">
 					<img src="img/miroir-hall.jpg" alt="" class="photo_hall">
@@ -60,25 +61,46 @@
 			</div>
 			<div class="hall_width right_side">
 				<div class="half_width_container">
-					Totalement sur mesure! Vous choisissez le format de votre miroir, le cadre, les informations que vous souhaitez et leurs positions.
+					<div class="text_container">
+						<!--Totalement sur mesure! Vous choisissez le format de votre miroir, le cadre, les informations que vous souhaitez et leurs positions.-->
+						<span class="medium bright">Votre miroir, unique au monde</span>
+						<ul>
+							<li>
+								<i class="fas fa-at"></i>
+								Données actualisées
+							</li>
+							<li>
+								<i class="fas fa-vector-square"></i>
+								Cadre et dimensions
+							</li>
+							<li>
+								<i class="fas fa-cogs"></i>
+								configuration
+							</li>
+							<li>
+								<i class="fas fa-arrows-alt"></i>
+								positionnement
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- STEP 3 -->
-		<div id="step3_container" class="css_window_step">
+		<div id="step3_container" class="css_window_step width_100">
 			<div class="hall_width left_side">du texte</div>
 			<div class="hall_width right_side">des icones </div>
 		</div>
 
 		<!-- STEP 4 -->
-		<div id="step4_container" class="css_window_step">
+		<div id="step4_container" class="css_window_step width_100">
 			<div class="hall_width left_side">du texte</div>
 			<div class="hall_width right_side">des icones </div>
 		</div>
 
 		<!-- STEP 5 -->
-		<div id="step5_container" class="css_window_step">
+		<div id="step5_container" class="css_window_step width_100">
 			<div class="hall_width left_side">du texte</div>
 			<div class="hall_width right_side">des icones </div>
 		</div>
@@ -90,7 +112,6 @@
 
 
 
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>-->
 	<script type="text/javascript" src="vendor/node_modules/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="vendor/node_modules/nunjucks/browser/nunjucks.min.js"></script>

@@ -17,17 +17,21 @@ body {
   overflow-y: scroll;
 }
 
+
 .css_window_step {
     position: absolute;
-    width: 90vw;
     text-align: center;
     height: 100vh;
+}
+
+.width_90 {
+    width: 90vw;
     padding-right: 5vh;
     padding-left: 5vh;
 }
 
 #step1_container {
-  top: 5vh;
+    top: 5vh;
 }
 
 #step2_container {
@@ -113,4 +117,13 @@ body {
     vertical-align: middle;
 }
 
+.text_container {
+    font-weight: 250;
+    margin-left: 2vw;
+}
+
+.text_container ul {
+    text-align: left;
+    margin-left: 2 vw;
+}
 
