@@ -10,16 +10,9 @@ $(document).ready(function () {
 	let demoStep = 0
 	let stepScroll = 0
 
-	//initPresentation()
-	setTimeout(initPresentation,3000)
+	setTimeout(initPresentation,1500)
 
-	/*$(window).on("click", function () {
-		demoStep = displayNextStepDemo(demoStep)
-	});*/
 
-	/*$(window).on('scroll', function() {
-		console.log('scroll');
-	});*/
 
 	var lastScrollPosition = 0;
 	window.onscroll = function() {
@@ -41,23 +34,17 @@ $(document).ready(function () {
 	}
 
 
-	/*var waypoint = new Waypoint({
-		element: $('body'),
-		handler: function(direction) {
-		}
-	})*/
-
 
 });
 
 function initPresentation() {
 
 	$('.region.lower.third .container').css('display','block')
-	$("#greeting_complement").fadeIn(5000 )
-	$(".module.clock").fadeIn(5000 )
-	$(".module.currentweather").fadeIn(5000 )
-	$(".module.weatherforecast").fadeIn(5000 )
-	$(".module.newsfeed").fadeIn(5000 )
+	$("#greeting_complement").fadeIn(3500)
+	$(".module.clock").fadeIn(3500)
+	$(".module.currentweather").fadeIn(3500)
+	$(".module.weatherforecast").fadeIn(3500)
+	$(".module.newsfeed").fadeIn(3500)
 }
 
 function displayNextStepDemo(demoStep) {

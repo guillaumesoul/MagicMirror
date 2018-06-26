@@ -73,6 +73,7 @@ body {
 .text_container_title {
     font-size: 45px;
     line-height: 45px;
+    margin-bottom: 50px;
 }
 
 table.table_accroches tr:nth-child(odd) td{
@@ -166,7 +167,7 @@ table.module_table tr:nth-child(odd) td{
     font-size: 20px;
 }
 
-.contact_form input, .contact_form textarea , .contact_form button{
+.contact_form input, .contact_form textarea , .contact_form button, .contact_form button:hover{
     background-color: white;
     color: black;
 }
