@@ -154,6 +154,17 @@ table.module_table tr:nth-child(odd) td{
 .size_2x {
     width: 100px;
 }
+/* FORM CONTACT */
+.contact_form .label_div {
+    vertical-align: top;
+    padding-top: 22px;
+}
+
+.label_div {
+    display: inline-block;
+    width: 150px;
+    font-size: 20px;
+}
 
 .contact_form input, .contact_form textarea , .contact_form button{
     background-color: white;
@@ -163,3 +174,4 @@ table.module_table tr:nth-child(odd) td{
 .contact_form_field {
     width: 50%;
 }
+/* END FORM CONTACT */
