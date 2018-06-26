@@ -91,7 +91,7 @@ function scrollNextSection(direction, currentSection) {
 	var coef = (direction == "upward") ? -1 : 1
 	var scrollTopValue = ($(window).height())*(currentSection+1)
 
-	console.log(scrollTopValue*coef);
+	//console.log(scrollTopValue*coef);
 
 	/*if(scrollComplete) {
 		$("html, body").animate({

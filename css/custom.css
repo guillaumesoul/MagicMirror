@@ -155,4 +155,11 @@ table.module_table tr:nth-child(odd) td{
     width: 100px;
 }
 
+.contact_form input, .contact_form textarea , .contact_form button{
+    background-color: white;
+    color: black;
+}
 
+.contact_form_field {
+    width: 50%;
+}
