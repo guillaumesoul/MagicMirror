@@ -9,12 +9,19 @@
  * Changes to this files will be ignored by GIT. *
  *****************************************************/
 
-body {
+/*body {
   position: absolute;
   margin: 0;
   height: 300vh;
   width: 100%;
   overflow-y: scroll;
+}*/
+
+body {
+    margin: 20px;
+    position: absolute;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
 }
 
 .css_window_step {
@@ -23,11 +30,11 @@ body {
     height: 100vh;
 }
 
-.width_90 {
+/*.width_90 {
     width: 90vw;
     padding-right: 5vh;
     padding-left: 5vh;
-}
+}*/
 
 #step1_container {
     top: 5vh;
@@ -103,7 +110,8 @@ table.table_accroches tr:nth-child(even) td{
 
 .hall_width {
     position: absolute;
-    width: 50vw;
+    /*width: 50vw;*/
+    width: 50%;
     height: 100vh;
     display: table;
     text-align: center;
