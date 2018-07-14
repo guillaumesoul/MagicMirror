@@ -34,7 +34,8 @@ module.exports = {
 		filename: 'webpack.bundle.js'
 	},
 	module: {
-		rules: [{
+		rules: [
+		{
 			test: /\.js$/,
 			exclude: /node_modules/,
 			loader: "babel-loader"
@@ -42,17 +43,35 @@ module.exports = {
 		{
 			test: /\.scss$/,
 			loader: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
-		}]
+		},
+		{
+			test: /\.(gif|png|jpe?g|svg)$/i,
+			use: [
+				'file-loader',
+				{
+					loader: 'image-webpack-loader',
+					options: {
+						bypassOnDebug: true, // webpack@1.x
+						//disable: true, // webpack@2.x and newer
+						optipng: {
+							enabled: true,
+							optimizationLevel: 6
+						},
+					},
+				},
+			],
+		}
+		]
 	},
 	plugins: [
-		new CopyWebpackPlugin([{
+		/*new CopyWebpackPlugin([{
 			from: 'img/'
 		}]),
 		new ImageminPlugin({
-			test: 'img/bigpngs2/**',
+			test: 'img/bigpngs2/!**',
 			optipng: {
 				optimizationLevel: 5
 			}
-		})
+		})*/
 	]
 };
