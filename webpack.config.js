@@ -26,6 +26,7 @@ module.exports = {
 		'./js/cssLoader.js',
 	],*/
 	entry: [
+		'./js/lazyLoad.js',
 		'./js/website.js',
 		'./js/cssLoader.js'
 	],
