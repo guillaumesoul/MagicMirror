@@ -4,27 +4,7 @@ var ImageminPlugin = require('imagemin-webpack-plugin').default;
 //import ImageminPlugin from 'imagemin-webpack-plugin'
 
 module.exports = {
-	//entry: './js/test1.js',
 	//entry: './js/cssLoader.js',
-	/*entry: {
-		cssLoader: './js/cssLoader.js'
-	},*/
-	/*entry: [
-		'./js/defaults.js',
-		'./config/config.js',
-		'./vendor/vendor.js',
-		'./modules/default/defaultmodules.js',
-		'./js/logger.js',
-		'./translations/translations.js',
-		'./js/translator.js',
-		'./js/class.js',
-		'./js/module.js',
-		'./js/loader.js',
-		'./js/socketclient.js',
-		'./js/main.js',
-		'./js/website.js',
-		'./js/cssLoader.js',
-	],*/
 	entry: [
 		'./js/lazyLoad.js',
 		'./js/website.js',
@@ -45,7 +25,7 @@ module.exports = {
 			test: /\.scss$/,
 			loader: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
 		},
-		{
+		/*{
 			test: /\.(gif|png|jpe?g|svg)$/i,
 			use: [
 				'file-loader',
@@ -61,7 +41,7 @@ module.exports = {
 					},
 				},
 			],
-		}
+		}*/
 		]
 	},
 	plugins: [
